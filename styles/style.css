@@ -283,7 +283,7 @@ img {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width < 768px) {
+@media (width <= 768px) {
   .header,
   .footer {
     min-block-size: 1024px;
@@ -299,6 +299,7 @@ img {
 
   .section {
     gap: 37px;
+    grid-template-columns: repeat(2, auto);
   }
 
   .section_title {
@@ -377,6 +378,10 @@ img {
     grid-template-columns: none;
     gap: 20px;
     margin-block-end: 50px;
+  }
+
+  .section_title {
+    max-inline-size: 100%;
   }
 
   .section_items {
