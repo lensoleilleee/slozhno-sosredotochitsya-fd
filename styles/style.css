@@ -298,7 +298,7 @@ img {
   }
 
   .section {
-    gap: 37px;
+    /* gap: 37px; */
     grid-template-columns: repeat(2, auto);
   }
 
@@ -317,7 +317,7 @@ img {
   }
 
   .decrease-in-concentration {
-    gap: 20px;
+    column-gap: 0;
   }
 
   .decrease-in-concentration .section_items {
