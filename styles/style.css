@@ -17,6 +17,7 @@ html {
 
 .header {
   grid-template-rows: 1fr min-content 1fr;
+  height: 100vh;
   min-block-size: 768px;
   position: relative;
   margin-bottom: 60px;
@@ -165,7 +166,6 @@ html {
   line-height: var(--main_line-height);
   font-weight: 700;
   max-inline-size: 315px;
-
 }
 
 .section_items {
@@ -272,7 +272,8 @@ img {
 
 .footer {
   display: grid;
-  block-size: 768px;
+  height: 100vh;
+  min-block-size: 768px;
   position: relative;
 }
 
@@ -282,7 +283,7 @@ img {
   text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-@media (width <= 768px) {
+@media (width < 768px) {
   .header,
   .footer {
     min-block-size: 1024px;
@@ -298,6 +299,10 @@ img {
 
   .section {
     gap: 37px;
+  }
+
+  .section_title {
+    max-inline-size: 236px;
   }
 
   .section_items {
