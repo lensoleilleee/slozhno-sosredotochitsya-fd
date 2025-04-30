@@ -381,9 +381,9 @@ img {
     grid-row: auto;
   }
 
-  .article_item_title {
+  /* .article_item_title {
     margin-block-end: 10px;
-  }
+  } */
 
   .methods-in-pictures .article_item_title {
     margin-block-end: 10px;
