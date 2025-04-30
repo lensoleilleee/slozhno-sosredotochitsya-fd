@@ -16,3 +16,10 @@
   --nav_color: #ff0070;
   --nav_decorated: #ff0070;
 }
+
+.theme-dark .page {
+  .rec::before,
+  .rec::after {
+    display: block;
+  }
+}

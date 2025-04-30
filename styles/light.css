@@ -30,15 +30,18 @@
     --nav_color: #353430;
     --nav_decorated: #353430;
   }
+
+  .page {
+    .rec::before,
+    .rec::after {
+      display: none;
+    }
+  }
 }
 
 .theme-light .page {
-  .rec::before {
-    display: none;
-  }
-
+  .rec::before,
   .rec::after {
     display: none;
   }
-  /* Вам также нужно будет написать ряд подобных селекторов */
 }

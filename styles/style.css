@@ -1,16 +1,11 @@
-html {
-  background-color: aliceblue;
-}
-
 .page {
-  max-inline-size: 1024px;
   background-color: var(--header_bg-color);
   background-image: var(--header_bg-image);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--main-text-color);
-  font-family: var(--main_font-family);
+  font-family: var(--main_font_family, monospace);
   font-size: var(--main_font-size);
   line-height: var(--main_line-height);
 }
@@ -37,7 +32,7 @@ html {
 
 .header__theme-menu-button {
   color: var(--nav_color);
-  font-family: var(--main_font_family);
+  font-family: var(--main_font_family, monospace);
   font-weight: 400;
   background-color: transparent;
   border: none;
@@ -103,7 +98,7 @@ html {
 .rec::before {
   content: "REC";
   color: var(--accent-color);
-  font-family: var(--main_font_family);
+  font-family: var(--main_font_family, monospace);
   font-size: var(--main_font-size);
   font-weight: 400;
 }
@@ -119,9 +114,9 @@ html {
   margin-left: 10px;
 }
 
-.header_title {
+.title {
   color: var(--header_title-color);
-  font-family: var(--main_font_family);
+  font-family: var(--main_font_family, monospace);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-weight: 700;
   text-shadow: 4px 4px 0 var(--accent-color);
@@ -131,7 +126,7 @@ html {
 .text-decor {
   background-color: var(--accent-color);
   color: var(--text-decor-color);
-  font-family: "IBM Plex mono";
+  font-family: var(--main_font_family, monospace);
   font-size: var(--main_font-size);
   font-weight: 700;
   line-height: var(--main_line-height);
@@ -160,7 +155,7 @@ html {
 }
 
 .section_title {
-  font-family: var(--main_font_family);
+  font-family: var(--main_font_family, monospace);
   font-size: var(--main_font-size);
   color: var(--section_title-color);
   line-height: var(--main_line-height);
@@ -175,47 +170,44 @@ html {
   grid-row: 1 / auto;
 }
 
-.article_item_title {
-  margin-block-end: 10px;
-}
-
 .article_item_description {
   color: var(--main_text-color);
-  font-family: var(--main_font_family);
+  font-family: var(--main_font_family, monospace);
   font-size: var(--main_font-size);
   font-weight: 400;
   line-height: var(--main_line-height);
+  margin-block-start: 10px;
 }
 
 .accent-shadow {
   text-shadow: 2px 2px 0 var(--accent-color);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .accent-shadow:hover {
   border-bottom: 1.5px solid var(--main_text-color);
 }
 
+.accent-shadow:focus {
+  outline: none;
+}
+
 .accent-shadow:focus-visible {
+  outline: none;
   border: 1px solid var(--main_text-color);
+}
+
+.article_item_subtitle {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 400;
 }
 
 .decrease-in-concentration .section_items {
   grid-template-columns: repeat(3, 1fr);
   grid-row: 2 / auto;
   grid-column-start: 1;
-}
-
-.how-to-concentrate .section_items .article_item_title {
-  margin-block-end: 0;
-}
-
-.how-to-concentrate .article_description .text-decor {
-  font-weight: 400;
-}
-
-.how-to-concentrate .section_items .article_item_description {
-  margin-block-start: 10px;
 }
 
 img {
@@ -364,7 +356,7 @@ img {
     left: calc(var(--decorative-elements-distance) - 10px);
   }
 
-  .header_title {
+  .title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
 
