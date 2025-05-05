@@ -317,7 +317,7 @@ img {
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 500px) {
   .main {
     padding: 0 10px;
   }
